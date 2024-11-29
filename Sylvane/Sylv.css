@@ -1,0 +1,167 @@
+/* General reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2e2e2e, #444444, #1a1a1a);
+    background-size: 300% 300%;
+    color: #fff;
+    animation: backgroundShift 8s infinite;
+    overflow: hidden;
+  }
+  
+  /* Animate the gradient background */
+  @keyframes backgroundShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Loading screen styles */
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(26, 26, 26, 1) 0%, rgba(15, 15, 15, 1) 100%);
+    z-index: 9999;
+    animation: pulse 1.5s infinite;
+    text-align: center;
+  }
+  
+  #loading-screen h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #cccccc;
+  }
+  
+  #loading-screen p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: #888;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+  
+  /* Fade-out animation */
+  .fade-out {
+    animation: fadeOut 0.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+  /* Main content hidden initially */
+  .hidden {
+    display: none;
+  }
+  
+  /* Main content styles */
+  header {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    color: #eeeeee;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+  }
+  
+  /* Navbar Styles */
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0;
+    background: rgba(50, 50, 50, 0.8);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  
+  nav ul li a:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Sections */
+  section {
+    margin: 50px auto;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #eeeeee;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  }
+  
+  section p {
+    font-size: 1rem;
+    color: #cccccc;
+  }
+  
+  /* Add a decorative animated background effect */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/dark-denim.png') repeat;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
